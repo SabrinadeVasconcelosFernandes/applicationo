@@ -2,6 +2,7 @@ package com.sabsrocambole.myapplicationo
 
 import android.os.Bundle
 import android.view.Menu
+import android.view.View
 import android.widget.Toolbar
 import androidx.appcompat.app.ActionBarDrawerToggle
 import com.google.android.material.snackbar.Snackbar
@@ -34,6 +35,7 @@ class MainActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.appBarMain.toolbar)
 
+
         binding.appBarMain.fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
@@ -43,7 +45,7 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_content_main)
 
         val toggle = ActionBarDrawerToggle(
-            this, drawerLayout,toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
+            this, drawerLayout,binding.appBarMain.toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
@@ -67,4 +69,15 @@ class MainActivity : AppCompatActivity() {
             super.onBackPressed()
         }
     }
+    fun loginBtnNavClicked(view:View){
+
+    }
+
+    fun addChannelClicked(view:View){
+
+    }
+    fun sendMessageBtnClicked(view: View){
+
+    }
+
 }
